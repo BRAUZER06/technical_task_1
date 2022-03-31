@@ -1,0 +1,53 @@
+body,html{
+  background-color: #C4C4C4;
+ 
+}
+
+.App {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 908px;
+  padding: 10px 19px;
+}
+.header{
+  display: flex;
+}
+.home{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.jokeItem{
+  padding: 10px 15px;
+  background-color:#ffffff;
+  width: 268px;
+  min-height: 40px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+  margin-bottom: 27px;
+  transition: 0.3s;
+  &:hover{
+    background-color: #dedede;
+  }
+  &__text{
+    text-align: left;
+    overflow-wrap:break-word;
+    margin-right: 10px;
+  }
+  &__btn{
+    font-size: 1.4em;
+    cursor: pointer;
+   
+  }
+}
+
+.button{
+  padding: 10px 10px;
+  &__btn{
+    margin-right: 20px;
+  }
+}
