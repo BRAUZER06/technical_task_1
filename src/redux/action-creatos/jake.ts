@@ -8,6 +8,8 @@ export const fetchJake = () => {
       dispatch({ type: FetchJakeActionTypes.FETCH_JAKE });
       const response = await axios.get('https://api.chucknorris.io/jokes/random')
       dispatch({type:FetchJakeActionTypes.FETCH_JAKE_SUCCESS, payload:response.data})
+      console.log("jake.ts");
+      
     } catch (error) {
       dispatch({
         type: FetchJakeActionTypes.FETCH_JAKE_ERROR,

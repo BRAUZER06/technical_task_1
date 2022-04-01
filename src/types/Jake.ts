@@ -1,5 +1,5 @@
 export interface FeatchJakeState {
-  jake: any[];
+  jake: any;
   loading: boolean;
   error: null | string;
 }
@@ -15,7 +15,7 @@ interface FetchJakeAction {
 }
  interface FetchJakeSuccessAction {
   type: FetchJakeActionTypes.FETCH_JAKE_SUCCESS;
-  payload: any[];
+  payload: any;
 }
 
  interface FetchJakeErrorAction {

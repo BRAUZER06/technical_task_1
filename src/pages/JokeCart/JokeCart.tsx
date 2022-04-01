@@ -3,7 +3,7 @@ import "../../App.scss";
 import { ImCross, ImCheckmark } from "react-icons/im";
 
 export const JokeCart = ({ ...props }) => {
-  const {  value } = props;
+  
   const [addRemoveItem, setAddRemoveItem] = React.useState(true);
 
   const onClickAddRemoveItem: React.MouseEventHandler<HTMLDivElement> = (
@@ -14,7 +14,7 @@ export const JokeCart = ({ ...props }) => {
 
   return (
     <div className="jokeItem">
-      <div className="jokeItem__text">{value}</div>
+      <div className="jokeItem__text">{props.value}</div>
       <div onClick={onClickAddRemoveItem} className="jokeItem__btn">
         {addRemoveItem ? <ImCross /> : <ImCheckmark />}
       </div>

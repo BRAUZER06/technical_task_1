@@ -1,3 +1,12 @@
+// [{
+//   categories: [],
+//   created_at: "",
+//   icon_url: "",
+//   id: "",
+//   updated_at: "",
+//   url: "",
+//   value: "",
+// }],
 import {
   FeatchJakeState,
   FetchJakeActionTypes,
@@ -9,16 +18,23 @@ const initState: FeatchJakeState = {
   loading: false,
   error: null,
 };
+console.log("reducer");
 export const featchJakeReducer = (
   state = initState,
   action: JakeAction
 ): FeatchJakeState => {
+  console.log("reducer");
   switch (action.type) {
-    case FetchJakeActionTypes.FETCH_JAKE:
-      return { loading: true, error: null, jake: [] };
-    case FetchJakeActionTypes.FETCH_JAKE_SUCCESS:
-      //тут настроить на принятие объекта
-      return { loading: false, error: null, jake: action.payload };
+    case FetchJakeActionTypes.FETCH_JAKE:    // P.s.думаю лучше убрать этот case
+      return {...state, loading: true, error: null, jake: [...state.jake] }; 
+    //  можно и так ==>           return {...state, loading: true, error: null };
+
+
+    case FetchJakeActionTypes.FETCH_JAKE_SUCCESS:   
+      return {...state, loading: false, error: null, jake: [...state.jake, action.payload]}
+
+
+
     case FetchJakeActionTypes.FETCH_JAKE_ERROR:
       return { loading: false, error: action.payload, jake: [] };
 

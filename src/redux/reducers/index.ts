@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import { featchJakeReducer } from "./featchJakeReducer";
 
 export const rootReducer = combineReducers({
-  jake: featchJakeReducer,
+  jakeFeatch: featchJakeReducer,
 });
 
 
