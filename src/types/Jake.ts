@@ -13,12 +13,12 @@ export enum FetchJakeActionTypes {
 interface FetchJakeAction {
   type: FetchJakeActionTypes.FETCH_JAKE;
 }
- interface FetchJakeSuccessAction {
+interface FetchJakeSuccessAction {
   type: FetchJakeActionTypes.FETCH_JAKE_SUCCESS;
   payload: any;
 }
 
- interface FetchJakeErrorAction {
+interface FetchJakeErrorAction {
   type: FetchJakeActionTypes.FETCH_JAKE_ERROR;
   payload: string;
 }
