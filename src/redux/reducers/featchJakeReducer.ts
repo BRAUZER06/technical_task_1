@@ -25,9 +25,9 @@ export const featchJakeReducer = (
 ): FeatchJakeState => {
   console.log("reducer");
   switch (action.type) {
-    case FetchJakeActionTypes.FETCH_JAKE: // P.s.думаю лучше убрать этот case
+    case FetchJakeActionTypes.FETCH_JAKE: 
       return { ...state, loading: true, error: null, jake: [...state.jake] };
-    //  можно и так ==>           return {...state, loading: true, error: null };
+    //  или так ==>           return {...state, loading: true, error: null };
 
     case FetchJakeActionTypes.FETCH_JAKE_SUCCESS:
       return {
